@@ -41,6 +41,6 @@ destroy(error)
 destroy(message)
 end on
 
-event open;//open
+event open;//open0
 end event
 
