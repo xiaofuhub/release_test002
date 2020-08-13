@@ -145,7 +145,6 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 79416533
 string text = "&Floating"
-borderstyle borderstyle = stylelowered!
 end type
 
 event clicked;//*-----------------------------------------------------------------*/
@@ -168,7 +167,6 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 79416533
 string text = "&Bottom"
-borderstyle borderstyle = stylelowered!
 end type
 
 event clicked;//*-----------------------------------------------------------------*/
@@ -191,7 +189,6 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 79416533
 string text = "&Right"
-borderstyle borderstyle = stylelowered!
 end type
 
 event clicked;//*-----------------------------------------------------------------*/
@@ -214,7 +211,6 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 79416533
 string text = "&Top"
-borderstyle borderstyle = stylelowered!
 end type
 
 event clicked;//*-----------------------------------------------------------------*/
@@ -237,7 +233,6 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 79416533
 string text = "&Left"
-borderstyle borderstyle = stylelowered!
 end type
 
 event clicked;//*-----------------------------------------------------------------*/
@@ -247,8 +242,8 @@ iw_window.ToolbarAlignment = AlignAtLeft!
 end event
 
 type cb_done from commandbutton within w_genapp3_toolbars
-integer x = 750
-integer y = 148
+integer x = 745
+integer y = 232
 integer width = 334
 integer height = 88
 integer taborder = 30
@@ -309,7 +304,6 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 79416533
 string text = "Show &PowerTips"
-borderstyle borderstyle = stylelowered!
 end type
 
 event clicked;//*-----------------------------------------------------------------*/
@@ -332,7 +326,6 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 79416533
 string text = "Show Te&xt"
-borderstyle borderstyle = stylelowered!
 end type
 
 event clicked;//*-----------------------------------------------------------------*/
@@ -356,6 +349,5 @@ string facename = "Tahoma"
 long textcolor = 33554432
 long backcolor = 79416533
 string text = "Move"
-borderstyle borderstyle = stylelowered!
 end type
 
