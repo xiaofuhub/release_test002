@@ -12,24 +12,33 @@ end forward
 
 global type genapp3 from application
 string appname = "genapp3"
+string themepath = "C:\Program Files (x86)\Appeon\PowerBuilder 19.0\IDE\theme"
+string themename = "Do Not Use Themes"
+boolean nativepdfvalid = false
+boolean nativepdfincludecustomfont = false
+string nativepdfappname = ""
+long richtextedittype = 2
+long richtexteditversion = 1
+string richtexteditkey = ""
+string appicon = ""
 end type
 global genapp3 genapp3
 
 on genapp3.create
-appname = "genapp3"
-message = create message
-sqlca = create transaction
-sqlda = create dynamicdescriptionarea
-sqlsa = create dynamicstagingarea
-error = create error
+appname="genapp3"
+message=create message
+sqlca=create transaction
+sqlda=create dynamicdescriptionarea
+sqlsa=create dynamicstagingarea
+error=create error
 end on
 
 on genapp3.destroy
-destroy( sqlca )
-destroy( sqlda )
-destroy( sqlsa )
-destroy( error )
-destroy( message )
+destroy(sqlca)
+destroy(sqlda)
+destroy(sqlsa)
+destroy(error)
+destroy(message)
 end on
 
 event open;//*-----------------------------------------------------------------*/
@@ -50,7 +59,7 @@ If lnv_connectserv.of_ConnectDB ( ) = 0 Then
 	/*  Open MDI frame window  */
 	Open ( w_genapp3_frame )
 End if
-
+//
 Destroy lnv_connectserv
 end event
 
