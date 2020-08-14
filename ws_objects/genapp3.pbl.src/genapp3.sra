@@ -62,6 +62,7 @@ End if
 // test 002
 //test001
 //test 002
+//test001
 Destroy lnv_connectserv
 end event
 
