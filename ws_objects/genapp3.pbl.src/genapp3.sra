@@ -74,6 +74,6 @@ lnv_connectserv = Create using "n_genapp3_connectservice"
 lnv_connectserv.of_DisconnectDB ( )
 
 Destroy lnv_connectserv
-// test0002
+// test0002000
 end event
 
