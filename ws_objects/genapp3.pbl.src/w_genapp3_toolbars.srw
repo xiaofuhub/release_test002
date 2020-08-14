@@ -242,8 +242,8 @@ iw_window.ToolbarAlignment = AlignAtLeft!
 end event
 
 type cb_done from commandbutton within w_genapp3_toolbars
-integer x = 745
-integer y = 232
+integer x = 754
+integer y = 428
 integer width = 334
 integer height = 88
 integer taborder = 30
