@@ -61,6 +61,7 @@ If lnv_connectserv.of_ConnectDB ( ) = 0 Then
 End if
 // test 002
 //test001
+//test 002
 Destroy lnv_connectserv
 end event
 
