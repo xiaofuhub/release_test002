@@ -59,15 +59,6 @@ If lnv_connectserv.of_ConnectDB ( ) = 0 Then
 	/*  Open MDI frame window  */
 	Open ( w_genapp3_frame )
 End if
-//<<<<<<< HEAD
-//test branch01 000001
-//=======
-//<<<<<<< HEAD
-//test branch01 002
-//=======
-//test branch01 00000
-//>>>>>>> master
-//>>>>>>> master
 Destroy lnv_connectserv
 end event
 
