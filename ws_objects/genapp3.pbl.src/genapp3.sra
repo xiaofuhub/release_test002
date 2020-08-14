@@ -60,6 +60,7 @@ If lnv_connectserv.of_ConnectDB ( ) = 0 Then
 	Open ( w_genapp3_frame )
 End if
 //test branch01 000001
+//>>>>>>> master
 Destroy lnv_connectserv
 end event
 
@@ -75,6 +76,6 @@ lnv_connectserv = Create using "n_genapp3_connectservice"
 lnv_connectserv.of_DisconnectDB ( )
 
 Destroy lnv_connectserv
-//test
+//test00000
 end event
 
