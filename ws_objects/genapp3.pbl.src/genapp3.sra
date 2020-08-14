@@ -60,7 +60,10 @@ If lnv_connectserv.of_ConnectDB ( ) = 0 Then
 	Open ( w_genapp3_frame )
 End if
 // test 002
-//test001
+//<<<<<<< HEAD
+//0111
+//002
+//022
 Destroy lnv_connectserv
 end event
 
