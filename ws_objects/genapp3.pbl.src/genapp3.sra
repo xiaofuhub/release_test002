@@ -84,5 +84,6 @@ lnv_connectserv.of_DisconnectDB ( )
 
 Destroy lnv_connectserv
 //test00000000000000020000011111
+//>>>>>>> master00
 end event
 
