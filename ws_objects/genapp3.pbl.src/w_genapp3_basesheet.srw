@@ -1,29 +1,32 @@
 ﻿$PBExportHeader$w_genapp3_basesheet.srw
 $PBExportComments$Generated MDI Base Sheet Window
 forward
-global type w_genapp3_basesheet from Window
+global type w_genapp3_basesheet from window
+end type
+type cb_1 from commandbutton within w_genapp3_basesheet
 end type
 end forward
 
-global type w_genapp3_basesheet from Window
-int X=672
-int Y=264
-int Width=1582
-int Height=1064
-boolean TitleBar=true
-string Title="Sheet"
-string MenuName="m_genapp3_sheet"
-long BackColor=79416533
-boolean ControlMenu=true
-boolean MinBox=true
-boolean MaxBox=true
-boolean Resizable=true
+global type w_genapp3_basesheet from window
+integer x = 672
+integer y = 264
+integer width = 1582
+integer height = 1064
+boolean titlebar = true
+string title = "Sheet"
+string menuname = "m_genapp3_sheet"
+boolean controlmenu = true
+boolean minbox = true
+boolean maxbox = true
+boolean resizable = true
+long backcolor = 79416533
 event ue_postopen ( )
 event ue_undo ( )
 event ue_cut ( )
 event ue_copy ( )
 event ue_paste ( )
 event ue_clear ( )
+cb_1 cb_1
 end type
 global w_genapp3_basesheet w_genapp3_basesheet
 
@@ -51,10 +54,13 @@ end event
 
 on w_genapp3_basesheet.create
 if this.MenuName = "m_genapp3_sheet" then this.MenuID = create m_genapp3_sheet
+this.cb_1=create cb_1
+this.Control[]={this.cb_1}
 end on
 
 on w_genapp3_basesheet.destroy
 if IsValid(MenuID) then destroy(MenuID)
+destroy(this.cb_1)
 end on
 
 event close;//*-----------------------------------------------------------------*/
@@ -63,4 +69,19 @@ event close;//*-----------------------------------------------------------------
 /*  Remove sheet from the array  */
 w_genapp3_frame.of_SheetIsClosing ( this ) 
 end event
+
+type cb_1 from commandbutton within w_genapp3_basesheet
+integer x = 768
+integer y = 208
+integer width = 457
+integer height = 132
+integer taborder = 10
+integer textsize = -12
+integer weight = 400
+fontcharset fontcharset = ansi!
+fontpitch fontpitch = variable!
+fontfamily fontfamily = swiss!
+string facename = "Tahoma"
+string text = "none"
+end type
 
