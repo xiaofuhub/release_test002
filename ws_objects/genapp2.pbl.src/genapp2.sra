@@ -12,24 +12,33 @@ end forward
 
 global type genapp2 from application
 string appname = "genapp2"
+string themepath = "C:\Program Files (x86)\Appeon\PowerBuilder 19.0\IDE\theme"
+string themename = "Do Not Use Themes"
+boolean nativepdfvalid = false
+boolean nativepdfincludecustomfont = false
+string nativepdfappname = ""
+long richtextedittype = 2
+long richtexteditversion = 1
+string richtexteditkey = ""
+string appicon = ""
 end type
 global genapp2 genapp2
 
 on genapp2.create
-appname = "genapp2"
-message = create message
-sqlca = create transaction
-sqlda = create dynamicdescriptionarea
-sqlsa = create dynamicstagingarea
-error = create error
+appname="genapp2"
+message=create message
+sqlca=create transaction
+sqlda=create dynamicdescriptionarea
+sqlsa=create dynamicstagingarea
+error=create error
 end on
 
 on genapp2.destroy
-destroy( sqlca )
-destroy( sqlda )
-destroy( sqlsa )
-destroy( error )
-destroy( message )
+destroy(sqlca)
+destroy(sqlda)
+destroy(sqlsa)
+destroy(error)
+destroy(message)
 end on
 
 event open;//*-----------------------------------------------------------------*/
@@ -66,5 +75,6 @@ lnv_connectserv = Create using "n_genapp2_connectservice"
 lnv_connectserv.of_DisconnectDB ( )
 
 Destroy lnv_connectserv
+//
 end event
 
