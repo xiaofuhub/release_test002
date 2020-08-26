@@ -2,8 +2,8 @@ Save Format v3.0(19990112)
 @begin Targets
  0 "fds.pbt";
  1 "genapp2.pbt";
- 2 "genapp6.pbt";
- 3 "genapp8.pbt";
+ 2 "genapp8.pbt";
+ 3 "genapp7.pbt";
 @end;
 DefaultTarget "genapp8.pbt";
 DefaultExportEncode "UTF-8";
