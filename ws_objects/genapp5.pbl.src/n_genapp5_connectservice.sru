@@ -1,13 +1,13 @@
-﻿$PBExportHeader$n_genapp11_connectservice.sru
+﻿$PBExportHeader$n_genapp5_connectservice.sru
 $PBExportComments$Generated Database Connection Service
 forward
-global type n_genapp11_connectservice from nonvisualobject
+global type n_genapp5_connectservice from nonvisualobject
 end type
 end forward
 
-global type n_genapp11_connectservice from nonvisualobject
+global type n_genapp5_connectservice from nonvisualobject
 end type
-global n_genapp11_connectservice n_genapp11_connectservice
+global n_genapp5_connectservice n_genapp5_connectservice
 
 type variables
 string is_connectfrom = "1"
@@ -30,7 +30,7 @@ public function integer of_getconnectioninfo (ref string as_dbms, ref string as_
 Choose Case is_connectfrom
 		
 	Case IS_USE_INIFILE						/*  Populate Database Connection from INI file  */
-		string ls_inifile = "F:\SourceControlTest\Git\release_test003\genapp11.ini"
+		string ls_inifile = "F:\SourceControlTest\Git\release_test001\genapp5.ini"
 		
 		as_dbms			= ProfileString ( ls_inifile, "Database", "DBMS", "ODBC")
 		as_database		= ProfileString ( ls_inifile, "Database", "Database", "")
@@ -170,12 +170,12 @@ If of_GetConnectionInfo ( ls_dbms, ls_database, ls_userid, ls_dbpass, ls_logid, 
 End If
 end event
 
-on n_genapp11_connectservice.create
+on n_genapp5_connectservice.create
 call super::create
 TriggerEvent( this, "constructor" )
 end on
 
-on n_genapp11_connectservice.destroy
+on n_genapp5_connectservice.destroy
 TriggerEvent( this, "destructor" )
 call super::destroy
 end on

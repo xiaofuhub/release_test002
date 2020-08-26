@@ -1,20 +1,20 @@
-﻿$PBExportHeader$w_genapp11_frame.srw
+﻿$PBExportHeader$w_genapp5_frame.srw
 $PBExportComments$Generated MDI Frame
 forward
-global type w_genapp11_frame from window
+global type w_genapp5_frame from window
 end type
-type mdi_1 from mdiclient within w_genapp11_frame
+type mdi_1 from mdiclient within w_genapp5_frame
 end type
 end forward
 
-global type w_genapp11_frame from window
+global type w_genapp5_frame from window
 integer x = 256
 integer y = 132
 integer width = 2409
 integer height = 1572
 boolean titlebar = true
 string title = "Frame"
-string menuname = "m_genapp11_frame"
+string menuname = "m_genapp5_frame"
 boolean controlmenu = true
 boolean minbox = true
 boolean maxbox = true
@@ -30,17 +30,17 @@ event type integer ue_print ( )
 event type integer ue_print_query ( )
 mdi_1 mdi_1
 end type
-global w_genapp11_frame w_genapp11_frame
+global w_genapp5_frame w_genapp5_frame
 
 type variables
-n_genapp11_sheetmanager inv_sheetmgt
+n_genapp5_sheetmanager inv_sheetmgt
 end variables
 
 forward prototypes
 public function long of_getsheetcount ()
-public function integer of_sheetisclosing (readonly w_genapp11_basesheet aw_sheet)
-public function long of_classcount (readonly w_genapp11_basesheet aw_sheet)
-public function integer of_adjustmenu (ref m_genapp11_frame am_menu)
+public function integer of_sheetisclosing (readonly w_genapp5_basesheet aw_sheet)
+public function long of_classcount (readonly w_genapp5_basesheet aw_sheet)
+public function integer of_adjustmenu (ref m_genapp5_frame am_menu)
 end prototypes
 
 event ue_new;//*-----------------------------------------------------------------*/
@@ -64,7 +64,7 @@ event ue_postopen();//*---------------------------------------------------------
 //*-----------------------------------------------------------------*/
 
 /*  Define sheet windows and their display names */
-string ls_sheets[]  = { "w_genapp11_sheet1", "w_genapp11_sheet2", "w_genapp11_sheet3" }
+string ls_sheets[]  = { "w_genapp5_sheet1", "w_genapp5_sheet2", "w_genapp5_sheet3" }
 string ls_display[]  = { "Untitled for Sheet 1", "Untitled for Sheet 2", "Untitled for Sheet 3" }
 
 /*  Register sheet windows with sheet manager  */
@@ -89,7 +89,7 @@ event ue_print;//*--------------------------------------------------------------
 //*    ue_print:   Print the Active Sheet
 //*-----------------------------------------------------------------*/
 long ll_job
-w_genapp11_basesheet lw_sheet
+w_genapp5_basesheet lw_sheet
 
 lw_sheet = this.GetActiveSheet ( )
 
@@ -108,7 +108,7 @@ event type integer ue_print_query();//*-----------------------------------------
 //*    ue_print:   Print the Active Sheet and show Print Dialog to set print info before job started.
 //*-----------------------------------------------------------------*/
 long ll_job
-w_genapp11_basesheet lw_sheet
+w_genapp5_basesheet lw_sheet
 
 lw_sheet = this.GetActiveSheet ( )
 
@@ -131,20 +131,20 @@ public function long of_getsheetcount ();//*------------------------------------
 Return inv_sheetmgt.of_SheetCount ( )
 end function
 
-public function integer of_sheetisclosing (readonly w_genapp11_basesheet aw_sheet);//*-----------------------------------------------------------------*/
+public function integer of_sheetisclosing (readonly w_genapp5_basesheet aw_sheet);//*-----------------------------------------------------------------*/
 //*    of_SheetIsClosing:  Remove the sheet from the array
 //*-----------------------------------------------------------------*/
 Return inv_sheetmgt.of_SheetIsClosing ( aw_sheet )
 end function
 
-public function long of_classcount (readonly w_genapp11_basesheet aw_sheet);//*-----------------------------------------------------------------*/
+public function long of_classcount (readonly w_genapp5_basesheet aw_sheet);//*-----------------------------------------------------------------*/
 //*    of_ClassCount:  Obtain the number of open sheets
 //*							 for the specified class
 //*-----------------------------------------------------------------*/
 Return inv_sheetmgt.of_ClassCount ( aw_sheet )
 end function
 
-public function integer of_adjustmenu (ref m_genapp11_frame am_menu);//*-----------------------------------------------------------------*/
+public function integer of_adjustmenu (ref m_genapp5_frame am_menu);//*-----------------------------------------------------------------*/
 //*    of_AdjustMenu:  Add Sheet names to the menu
 //*-----------------------------------------------------------------*/
 Return inv_sheetmgt.of_AdjustMenu ( am_menu )
@@ -156,23 +156,23 @@ event open;//*-----------------------------------------------------------------*
 string ls_sheets[]
 
 /*  Create an instance of the sheet manager  */
-inv_sheetmgt = Create n_genapp11_sheetmanager
+inv_sheetmgt = Create n_genapp5_sheetmanager
 
 this.Post Event ue_postopen ( )
 end event
 
-on w_genapp11_frame.create
-if this.MenuName = "m_genapp11_frame" then this.MenuID = create m_genapp11_frame
+on w_genapp5_frame.create
+if this.MenuName = "m_genapp5_frame" then this.MenuID = create m_genapp5_frame
 this.mdi_1=create mdi_1
 this.Control[]={this.mdi_1}
 end on
 
-on w_genapp11_frame.destroy
+on w_genapp5_frame.destroy
 if IsValid(MenuID) then destroy(MenuID)
 destroy(this.mdi_1)
 end on
 
-type mdi_1 from mdiclient within w_genapp11_frame
+type mdi_1 from mdiclient within w_genapp5_frame
 long BackColor=275287458
 end type
 

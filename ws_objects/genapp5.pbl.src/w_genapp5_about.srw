@@ -1,15 +1,15 @@
-﻿$PBExportHeader$w_genapp11_about.srw
+﻿$PBExportHeader$w_genapp5_about.srw
 $PBExportComments$Generated MDI About Box
 forward
-global type w_genapp11_about from window
+global type w_genapp5_about from window
 end type
-type cb_ok from commandbutton within w_genapp11_about
+type cb_ok from commandbutton within w_genapp5_about
 end type
-type st_copyright from statictext within w_genapp11_about
+type st_copyright from statictext within w_genapp5_about
 end type
 end forward
 
-global type w_genapp11_about from window
+global type w_genapp5_about from window
 integer x = 873
 integer y = 428
 integer width = 1166
@@ -23,21 +23,21 @@ boolean center = true
 cb_ok cb_ok
 st_copyright st_copyright
 end type
-global w_genapp11_about w_genapp11_about
+global w_genapp5_about w_genapp5_about
 
-on w_genapp11_about.create
+on w_genapp5_about.create
 this.cb_ok=create cb_ok
 this.st_copyright=create st_copyright
 this.Control[]={this.cb_ok,&
 this.st_copyright}
 end on
 
-on w_genapp11_about.destroy
+on w_genapp5_about.destroy
 destroy(this.cb_ok)
 destroy(this.st_copyright)
 end on
 
-type cb_ok from commandbutton within w_genapp11_about
+type cb_ok from commandbutton within w_genapp5_about
 integer x = 407
 integer y = 348
 integer width = 334
@@ -59,7 +59,7 @@ event clicked;//*---------------------------------------------------------------
 Close ( Parent )
 end event
 
-type st_copyright from statictext within w_genapp11_about
+type st_copyright from statictext within w_genapp5_about
 integer x = 27
 integer y = 20
 integer width = 1097

@@ -1,17 +1,17 @@
-﻿$PBExportHeader$n_genapp11_sheetmanager.sru
+﻿$PBExportHeader$n_genapp5_sheetmanager.sru
 $PBExportComments$Generated MDI Sheet Management
 forward
-global type n_genapp11_sheetmanager from nonvisualobject
+global type n_genapp5_sheetmanager from nonvisualobject
 end type
 end forward
 
-global type n_genapp11_sheetmanager from nonvisualobject
+global type n_genapp5_sheetmanager from nonvisualobject
 end type
-global n_genapp11_sheetmanager n_genapp11_sheetmanager
+global n_genapp5_sheetmanager n_genapp5_sheetmanager
 
 type variables
 string is_sheets[], is_display[]
-w_genapp11_basesheet iw_opensheets[]
+w_genapp5_basesheet iw_opensheets[]
 menu im_items[]
 end variables
 
@@ -19,10 +19,10 @@ forward prototypes
 public function integer of_unregistersheet (readonly string as_sheet)
 public function long of_sheetcount ()
 public function integer of_opensheet (readonly string as_sheetname)
-public function long of_sheetisclosing (readonly w_genapp11_basesheet aw_sheet)
-public function long of_classcount (readonly w_genapp11_basesheet aw_sheet)
+public function long of_sheetisclosing (readonly w_genapp5_basesheet aw_sheet)
+public function long of_classcount (readonly w_genapp5_basesheet aw_sheet)
 public function integer of_openallsheets ()
-public function integer of_adjustmenu (ref m_genapp11_frame am_menu)
+public function integer of_adjustmenu (ref m_genapp5_frame am_menu)
 public function integer of_resetmenu ()
 public function integer of_registersheets (readonly string as_sheets[], readonly string as_displays[])
 public function integer of_addtomenu (readonly string as_sheet, readonly string as_display)
@@ -67,10 +67,10 @@ public function integer of_opensheet (readonly string as_sheetname);//*---------
 //*    of_OpenSheet:  Open an instance of a sheet
 //*-----------------------------------------------------------------*/
 int li_rc
-w_genapp11_basesheet lw_sheet
+w_genapp5_basesheet lw_sheet
 
 /*  Open an instance of the specified sheet  */
-li_rc = OpenSheet ( lw_sheet, as_sheetname, w_genapp11_frame, 0, Cascaded! ) 
+li_rc = OpenSheet ( lw_sheet, as_sheetname, w_genapp5_frame, 0, Cascaded! ) 
 
 If li_rc = 1 Then
 	/*  Add the sheet reference to the open sheet array  */
@@ -80,11 +80,11 @@ End If
 Return li_rc
 end function
 
-public function long of_sheetisclosing (readonly w_genapp11_basesheet aw_sheet);//*-----------------------------------------------------------------*/
+public function long of_sheetisclosing (readonly w_genapp5_basesheet aw_sheet);//*-----------------------------------------------------------------*/
 //*    of_SheetIsClosing:  Remove sheet from the array
 //*-----------------------------------------------------------------*/
 long ll_s, ll_sheets, ll_newsheets
-w_genapp11_basesheet lw_sheets[], lw_init[]
+w_genapp5_basesheet lw_sheets[], lw_init[]
 
 /*  Add the sheet reference to the open sheet array  */
 ll_sheets = UpperBound (  iw_opensheets )
@@ -103,7 +103,7 @@ iw_opensheets = lw_sheets
 Return ll_newsheets
 end function
 
-public function long of_classcount (readonly w_genapp11_basesheet aw_sheet);//*-----------------------------------------------------------------*/
+public function long of_classcount (readonly w_genapp5_basesheet aw_sheet);//*-----------------------------------------------------------------*/
 //*    of_ClassCount:  Return the count of open sheets for this class
 //*-----------------------------------------------------------------*/
 long ll_s, ll_sheets, ll_instcount
@@ -141,7 +141,7 @@ Next
 Return li_return
 end function
 
-public function integer of_adjustmenu (ref m_genapp11_frame am_menu);//*-----------------------------------------------------------------*/
+public function integer of_adjustmenu (ref m_genapp5_frame am_menu);//*-----------------------------------------------------------------*/
 //*    of_AdjustMenu:  Add the sheet name to the frame menu
 //*-----------------------------------------------------------------*/
 long ll_i, ll_items
@@ -160,10 +160,10 @@ end function
 public function integer of_resetmenu ();//*-----------------------------------------------------------------*/
 //*    of_ResetMenu:  Reset the sheet items
 //*-----------------------------------------------------------------*/
-m_genapp11_frame lm_menu
+m_genapp5_frame lm_menu
 int li_i, li_max
 
-lm_menu = w_genapp11_frame.MenuId
+lm_menu = w_genapp5_frame.MenuId
 
 /*  Get References to all the items under opensheet */
 im_items = lm_menu.m_file.m_new.item
@@ -205,10 +205,10 @@ end function
 public function integer of_addtomenu (readonly string as_sheet, readonly string as_display);//*-----------------------------------------------------------------*/
 //*    of_AddToMenu:  Add the sheet name to the frame menu
 //*-----------------------------------------------------------------*/
-m_genapp11_frame lm_menu
+m_genapp5_frame lm_menu
 int li_i, li_max, li_j
 
-lm_menu = w_genapp11_frame.MenuId
+lm_menu = w_genapp5_frame.MenuId
 
 /*  Get References to all the items under opensheet */
 im_items = lm_menu.m_file.m_new.item
@@ -243,9 +243,9 @@ long ll_s, ll_sheets
 	 in strings ) would not otherwise be included.
 	 If you choose to use a PBR file or dynamic libraries, these
 	 references can be removed  */
-w_genapp11_sheet1	lw_sheet1
-w_genapp11_sheet2	lw_sheet2
-w_genapp11_sheet3	lw_sheet3
+w_genapp5_sheet1	lw_sheet1
+w_genapp5_sheet2	lw_sheet2
+w_genapp5_sheet3	lw_sheet3
 
 ll_sheets = UpperBound ( is_sheets ) 
 
@@ -262,12 +262,12 @@ of_AddToMenu ( as_sheet, as_display )
 Return 1
 end function
 
-on n_genapp11_sheetmanager.create
+on n_genapp5_sheetmanager.create
 call super::create
 TriggerEvent( this, "constructor" )
 end on
 
-on n_genapp11_sheetmanager.destroy
+on n_genapp5_sheetmanager.destroy
 TriggerEvent( this, "destructor" )
 call super::destroy
 end on

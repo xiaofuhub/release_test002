@@ -1,24 +1,24 @@
-﻿$PBExportHeader$m_genapp11_sheet.srm
+﻿$PBExportHeader$m_genapp5_sheet.srm
 $PBExportComments$Generated MDI Sheet Menu
 forward
-global type m_genapp11_sheet from m_genapp11_frame
+global type m_genapp5_sheet from m_genapp5_frame
 end type
 end forward
 
-global type m_genapp11_sheet from m_genapp11_frame
+global type m_genapp5_sheet from m_genapp5_frame
 end type
-global m_genapp11_sheet m_genapp11_sheet
+global m_genapp5_sheet m_genapp5_sheet
 
-on m_genapp11_sheet.create
-m_genapp11_sheet=this
+on m_genapp5_sheet.create
+m_genapp5_sheet=this
 call super::create
 end on
 
-on m_genapp11_sheet.destroy
+on m_genapp5_sheet.destroy
 call super::destroy
 end on
 
-type m_file from m_genapp11_frame`m_file within m_genapp11_sheet
+type m_file from m_genapp5_frame`m_file within m_genapp5_sheet
 end type
 
 on m_file.create
@@ -29,7 +29,7 @@ on m_file.destroy
 call super::destroy
 end on
 
-type m_new from m_genapp11_frame`m_new within m_file
+type m_new from m_genapp5_frame`m_new within m_file
 end type
 
 on m_new.create
@@ -40,7 +40,7 @@ on m_new.destroy
 call super::destroy
 end on
 
-type m_sheet1 from m_genapp11_frame`m_sheet1 within m_new
+type m_sheet1 from m_genapp5_frame`m_sheet1 within m_new
 end type
 
 on m_sheet1.create
@@ -51,7 +51,7 @@ on m_sheet1.destroy
 call super::destroy
 end on
 
-type m_sheet2 from m_genapp11_frame`m_sheet2 within m_new
+type m_sheet2 from m_genapp5_frame`m_sheet2 within m_new
 end type
 
 on m_sheet2.create
@@ -62,7 +62,7 @@ on m_sheet2.destroy
 call super::destroy
 end on
 
-type m_sheet3 from m_genapp11_frame`m_sheet3 within m_new
+type m_sheet3 from m_genapp5_frame`m_sheet3 within m_new
 end type
 
 on m_sheet3.create
@@ -73,7 +73,7 @@ on m_sheet3.destroy
 call super::destroy
 end on
 
-type m_sheet4 from m_genapp11_frame`m_sheet4 within m_new
+type m_sheet4 from m_genapp5_frame`m_sheet4 within m_new
 end type
 
 on m_sheet4.create
@@ -84,7 +84,7 @@ on m_sheet4.destroy
 call super::destroy
 end on
 
-type m_sheet5 from m_genapp11_frame`m_sheet5 within m_new
+type m_sheet5 from m_genapp5_frame`m_sheet5 within m_new
 end type
 
 on m_sheet5.create
@@ -95,7 +95,7 @@ on m_sheet5.destroy
 call super::destroy
 end on
 
-type m_sheet6 from m_genapp11_frame`m_sheet6 within m_new
+type m_sheet6 from m_genapp5_frame`m_sheet6 within m_new
 end type
 
 on m_sheet6.create
@@ -106,7 +106,7 @@ on m_sheet6.destroy
 call super::destroy
 end on
 
-type m_sheet7 from m_genapp11_frame`m_sheet7 within m_new
+type m_sheet7 from m_genapp5_frame`m_sheet7 within m_new
 end type
 
 on m_sheet7.create
@@ -117,7 +117,7 @@ on m_sheet7.destroy
 call super::destroy
 end on
 
-type m_sheet8 from m_genapp11_frame`m_sheet8 within m_new
+type m_sheet8 from m_genapp5_frame`m_sheet8 within m_new
 end type
 
 on m_sheet8.create
@@ -128,7 +128,7 @@ on m_sheet8.destroy
 call super::destroy
 end on
 
-type m_sheet9 from m_genapp11_frame`m_sheet9 within m_new
+type m_sheet9 from m_genapp5_frame`m_sheet9 within m_new
 end type
 
 on m_sheet9.create
@@ -139,7 +139,7 @@ on m_sheet9.destroy
 call super::destroy
 end on
 
-type m_sheet10 from m_genapp11_frame`m_sheet10 within m_new
+type m_sheet10 from m_genapp5_frame`m_sheet10 within m_new
 end type
 
 on m_sheet10.create
@@ -150,7 +150,7 @@ on m_sheet10.destroy
 call super::destroy
 end on
 
-type m_open from m_genapp11_frame`m_open within m_file
+type m_open from m_genapp5_frame`m_open within m_file
 end type
 
 on m_open.create
@@ -161,7 +161,7 @@ on m_open.destroy
 call super::destroy
 end on
 
-type m_close from m_genapp11_frame`m_close within m_file
+type m_close from m_genapp5_frame`m_close within m_file
 end type
 
 on m_close.create
@@ -173,7 +173,7 @@ on m_close.destroy
 call super::destroy
 end on
 
-type m_dash1 from m_genapp11_frame`m_dash1 within m_file
+type m_dash1 from m_genapp5_frame`m_dash1 within m_file
 end type
 
 on m_dash1.create
@@ -184,7 +184,7 @@ on m_dash1.destroy
 call super::destroy
 end on
 
-type m_print from m_genapp11_frame`m_print within m_file
+type m_print from m_genapp5_frame`m_print within m_file
 end type
 
 on m_print.create
@@ -196,7 +196,7 @@ on m_print.destroy
 call super::destroy
 end on
 
-type m_print_query from m_genapp11_frame`m_print_query within m_file
+type m_print_query from m_genapp5_frame`m_print_query within m_file
 end type
 
 on m_print_query.create
@@ -208,7 +208,7 @@ on m_print_query.destroy
 call super::destroy
 end on
 
-type m_printersetup from m_genapp11_frame`m_printersetup within m_file
+type m_printersetup from m_genapp5_frame`m_printersetup within m_file
 end type
 
 on m_printersetup.create
@@ -219,7 +219,7 @@ on m_printersetup.destroy
 call super::destroy
 end on
 
-type m_dash2 from m_genapp11_frame`m_dash2 within m_file
+type m_dash2 from m_genapp5_frame`m_dash2 within m_file
 end type
 
 on m_dash2.create
@@ -230,7 +230,7 @@ on m_dash2.destroy
 call super::destroy
 end on
 
-type m_toolbars from m_genapp11_frame`m_toolbars within m_file
+type m_toolbars from m_genapp5_frame`m_toolbars within m_file
 end type
 
 on m_toolbars.create
@@ -241,7 +241,7 @@ on m_toolbars.destroy
 call super::destroy
 end on
 
-type m_dash3 from m_genapp11_frame`m_dash3 within m_file
+type m_dash3 from m_genapp5_frame`m_dash3 within m_file
 end type
 
 on m_dash3.create
@@ -252,7 +252,7 @@ on m_dash3.destroy
 call super::destroy
 end on
 
-type m_exit from m_genapp11_frame`m_exit within m_file
+type m_exit from m_genapp5_frame`m_exit within m_file
 end type
 
 on m_exit.create
@@ -263,7 +263,7 @@ on m_exit.destroy
 call super::destroy
 end on
 
-type m_edit from m_genapp11_frame`m_edit within m_genapp11_sheet
+type m_edit from m_genapp5_frame`m_edit within m_genapp5_sheet
 end type
 
 on m_edit.create
@@ -274,7 +274,7 @@ on m_edit.destroy
 call super::destroy
 end on
 
-type m_undo from m_genapp11_frame`m_undo within m_edit
+type m_undo from m_genapp5_frame`m_undo within m_edit
 end type
 
 on m_undo.create
@@ -285,7 +285,7 @@ on m_undo.destroy
 call super::destroy
 end on
 
-type m_dash5 from m_genapp11_frame`m_dash5 within m_edit
+type m_dash5 from m_genapp5_frame`m_dash5 within m_edit
 end type
 
 on m_dash5.create
@@ -296,7 +296,7 @@ on m_dash5.destroy
 call super::destroy
 end on
 
-type m_cut from m_genapp11_frame`m_cut within m_edit
+type m_cut from m_genapp5_frame`m_cut within m_edit
 end type
 
 on m_cut.create
@@ -307,7 +307,7 @@ on m_cut.destroy
 call super::destroy
 end on
 
-type m_copy from m_genapp11_frame`m_copy within m_edit
+type m_copy from m_genapp5_frame`m_copy within m_edit
 end type
 
 on m_copy.create
@@ -318,7 +318,7 @@ on m_copy.destroy
 call super::destroy
 end on
 
-type m_paste from m_genapp11_frame`m_paste within m_edit
+type m_paste from m_genapp5_frame`m_paste within m_edit
 end type
 
 on m_paste.create
@@ -329,7 +329,7 @@ on m_paste.destroy
 call super::destroy
 end on
 
-type m_clear from m_genapp11_frame`m_clear within m_edit
+type m_clear from m_genapp5_frame`m_clear within m_edit
 end type
 
 on m_clear.create
@@ -340,7 +340,7 @@ on m_clear.destroy
 call super::destroy
 end on
 
-type m_window from m_genapp11_frame`m_window within m_genapp11_sheet
+type m_window from m_genapp5_frame`m_window within m_genapp5_sheet
 end type
 
 on m_window.create
@@ -351,7 +351,7 @@ on m_window.destroy
 call super::destroy
 end on
 
-type m_tilevertical from m_genapp11_frame`m_tilevertical within m_window
+type m_tilevertical from m_genapp5_frame`m_tilevertical within m_window
 end type
 
 on m_tilevertical.create
@@ -363,7 +363,7 @@ on m_tilevertical.destroy
 call super::destroy
 end on
 
-type m_tilehorizontal from m_genapp11_frame`m_tilehorizontal within m_window
+type m_tilehorizontal from m_genapp5_frame`m_tilehorizontal within m_window
 end type
 
 on m_tilehorizontal.create
@@ -375,7 +375,7 @@ on m_tilehorizontal.destroy
 call super::destroy
 end on
 
-type m_layer from m_genapp11_frame`m_layer within m_window
+type m_layer from m_genapp5_frame`m_layer within m_window
 end type
 
 on m_layer.create
@@ -387,7 +387,7 @@ on m_layer.destroy
 call super::destroy
 end on
 
-type m_cascade from m_genapp11_frame`m_cascade within m_window
+type m_cascade from m_genapp5_frame`m_cascade within m_window
 end type
 
 on m_cascade.create
@@ -399,7 +399,7 @@ on m_cascade.destroy
 call super::destroy
 end on
 
-type m_dash6 from m_genapp11_frame`m_dash6 within m_window
+type m_dash6 from m_genapp5_frame`m_dash6 within m_window
 end type
 
 on m_dash6.create
@@ -410,7 +410,7 @@ on m_dash6.destroy
 call super::destroy
 end on
 
-type m_arrangeicons from m_genapp11_frame`m_arrangeicons within m_window
+type m_arrangeicons from m_genapp5_frame`m_arrangeicons within m_window
 end type
 
 on m_arrangeicons.create
@@ -422,7 +422,7 @@ on m_arrangeicons.destroy
 call super::destroy
 end on
 
-type m_help from m_genapp11_frame`m_help within m_genapp11_sheet
+type m_help from m_genapp5_frame`m_help within m_genapp5_sheet
 end type
 
 on m_help.create
@@ -433,7 +433,7 @@ on m_help.destroy
 call super::destroy
 end on
 
-type m_helpindex from m_genapp11_frame`m_helpindex within m_help
+type m_helpindex from m_genapp5_frame`m_helpindex within m_help
 end type
 
 on m_helpindex.create
@@ -444,7 +444,7 @@ on m_helpindex.destroy
 call super::destroy
 end on
 
-type m_search from m_genapp11_frame`m_search within m_help
+type m_search from m_genapp5_frame`m_search within m_help
 end type
 
 on m_search.create
@@ -455,7 +455,7 @@ on m_search.destroy
 call super::destroy
 end on
 
-type m_dash4 from m_genapp11_frame`m_dash4 within m_help
+type m_dash4 from m_genapp5_frame`m_dash4 within m_help
 end type
 
 on m_dash4.create
@@ -466,7 +466,7 @@ on m_dash4.destroy
 call super::destroy
 end on
 
-type m_aboutquickapp from m_genapp11_frame`m_aboutquickapp within m_help
+type m_aboutquickapp from m_genapp5_frame`m_aboutquickapp within m_help
 end type
 
 on m_aboutquickapp.create

@@ -1,31 +1,31 @@
-﻿$PBExportHeader$w_genapp11_toolbars.srw
+﻿$PBExportHeader$w_genapp5_toolbars.srw
 $PBExportComments$Generated MDI Toolbar Configuration
 forward
-global type w_genapp11_toolbars from window
+global type w_genapp5_toolbars from window
 end type
-type rb_floating from radiobutton within w_genapp11_toolbars
+type rb_floating from radiobutton within w_genapp5_toolbars
 end type
-type rb_bottom from radiobutton within w_genapp11_toolbars
+type rb_bottom from radiobutton within w_genapp5_toolbars
 end type
-type rb_right from radiobutton within w_genapp11_toolbars
+type rb_right from radiobutton within w_genapp5_toolbars
 end type
-type rb_top from radiobutton within w_genapp11_toolbars
+type rb_top from radiobutton within w_genapp5_toolbars
 end type
-type rb_left from radiobutton within w_genapp11_toolbars
+type rb_left from radiobutton within w_genapp5_toolbars
 end type
-type cb_done from commandbutton within w_genapp11_toolbars
+type cb_done from commandbutton within w_genapp5_toolbars
 end type
-type cb_visible from commandbutton within w_genapp11_toolbars
+type cb_visible from commandbutton within w_genapp5_toolbars
 end type
-type cbx_showtips from checkbox within w_genapp11_toolbars
+type cbx_showtips from checkbox within w_genapp5_toolbars
 end type
-type cbx_showtext from checkbox within w_genapp11_toolbars
+type cbx_showtext from checkbox within w_genapp5_toolbars
 end type
-type gb_options from groupbox within w_genapp11_toolbars
+type gb_options from groupbox within w_genapp5_toolbars
 end type
 end forward
 
-global type w_genapp11_toolbars from window
+global type w_genapp5_toolbars from window
 integer x = 850
 integer y = 468
 integer width = 1157
@@ -47,7 +47,7 @@ cbx_showtips cbx_showtips
 cbx_showtext cbx_showtext
 gb_options gb_options
 end type
-global w_genapp11_toolbars w_genapp11_toolbars
+global w_genapp5_toolbars w_genapp5_toolbars
 
 type variables
 /*  Parent window reference */
@@ -95,7 +95,7 @@ cbx_showtext.Checked = GetApplication ( ).ToolbarText
 cbx_showtips.Checked = GetApplication ( ).ToolbarTips 
 end event
 
-on w_genapp11_toolbars.create
+on w_genapp5_toolbars.create
 this.rb_floating=create rb_floating
 this.rb_bottom=create rb_bottom
 this.rb_right=create rb_right
@@ -118,7 +118,7 @@ this.cbx_showtext,&
 this.gb_options}
 end on
 
-on w_genapp11_toolbars.destroy
+on w_genapp5_toolbars.destroy
 destroy(this.rb_floating)
 destroy(this.rb_bottom)
 destroy(this.rb_right)
@@ -131,7 +131,7 @@ destroy(this.cbx_showtext)
 destroy(this.gb_options)
 end on
 
-type rb_floating from radiobutton within w_genapp11_toolbars
+type rb_floating from radiobutton within w_genapp5_toolbars
 integer x = 119
 integer y = 420
 integer width = 530
@@ -154,7 +154,7 @@ event clicked;//*---------------------------------------------------------------
 iw_window.ToolbarAlignment = Floating!
 end event
 
-type rb_bottom from radiobutton within w_genapp11_toolbars
+type rb_bottom from radiobutton within w_genapp5_toolbars
 integer x = 119
 integer y = 344
 integer width = 530
@@ -177,7 +177,7 @@ event clicked;//*---------------------------------------------------------------
 iw_window.ToolbarAlignment = AlignAtBottom!
 end event
 
-type rb_right from radiobutton within w_genapp11_toolbars
+type rb_right from radiobutton within w_genapp5_toolbars
 integer x = 119
 integer y = 268
 integer width = 530
@@ -200,7 +200,7 @@ event clicked;//*---------------------------------------------------------------
 iw_window.ToolbarAlignment = AlignAtRight!
 end event
 
-type rb_top from radiobutton within w_genapp11_toolbars
+type rb_top from radiobutton within w_genapp5_toolbars
 integer x = 119
 integer y = 192
 integer width = 530
@@ -223,7 +223,7 @@ event clicked;//*---------------------------------------------------------------
 iw_window.ToolbarAlignment = AlignAtTop!
 end event
 
-type rb_left from radiobutton within w_genapp11_toolbars
+type rb_left from radiobutton within w_genapp5_toolbars
 integer x = 119
 integer y = 116
 integer width = 530
@@ -246,7 +246,7 @@ event clicked;//*---------------------------------------------------------------
 iw_window.ToolbarAlignment = AlignAtLeft!
 end event
 
-type cb_done from commandbutton within w_genapp11_toolbars
+type cb_done from commandbutton within w_genapp5_toolbars
 integer x = 750
 integer y = 148
 integer width = 334
@@ -267,7 +267,7 @@ event clicked;//*---------------------------------------------------------------
 Close ( Parent )
 end event
 
-type cb_visible from commandbutton within w_genapp11_toolbars
+type cb_visible from commandbutton within w_genapp5_toolbars
 integer x = 750
 integer y = 48
 integer width = 334
@@ -295,7 +295,7 @@ Else
 End If
 end event
 
-type cbx_showtips from checkbox within w_genapp11_toolbars
+type cbx_showtips from checkbox within w_genapp5_toolbars
 integer x = 119
 integer y = 656
 integer width = 462
@@ -318,7 +318,7 @@ event clicked;//*---------------------------------------------------------------
 GetApplication ( ).ToolbarTips = this.Checked 
 end event
 
-type cbx_showtext from checkbox within w_genapp11_toolbars
+type cbx_showtext from checkbox within w_genapp5_toolbars
 integer x = 119
 integer y = 568
 integer width = 457
@@ -341,7 +341,7 @@ event clicked;//*---------------------------------------------------------------
 GetApplication ( ).ToolbarText = this.Checked 
 end event
 
-type gb_options from groupbox within w_genapp11_toolbars
+type gb_options from groupbox within w_genapp5_toolbars
 integer x = 46
 integer y = 24
 integer width = 658
