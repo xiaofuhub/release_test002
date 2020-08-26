@@ -30,7 +30,11 @@ public function integer of_getconnectioninfo (ref string as_dbms, ref string as_
 Choose Case is_connectfrom
 		
 	Case IS_USE_INIFILE						/*  Populate Database Connection from INI file  */
+//<<<<<<< HEAD
 		string ls_inifile = "F:\SourceControlTest\Git\release_test003\genapp12.ini"
+//=======
+		string ls_inifile = "F:\SourceControlTest\Git\apptest001\genapp12.ini"
+//>>>>>>> master
 		
 		as_dbms			= ProfileString ( ls_inifile, "Database", "DBMS", "ODBC")
 		as_database		= ProfileString ( ls_inifile, "Database", "Database", "")
