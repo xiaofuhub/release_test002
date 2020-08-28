@@ -5,11 +5,7 @@ Save Format v3.0(19990112)
 @begin Targets
  0 "fds.pbt";
  1 "genapp2.pbt";
- 2 "genapp7.pbt";
- 3 "genapp9.pbt";
- 4 "genapp10.pbt";
- 5 "genapp13.pbt";
 @end;
-DefaultTarget "genapp13.pbt";
+DefaultTarget "fds.pbt";
 DefaultExportEncode "UTF-8";
-DefaultRemoteTarget "genapp13.pbt";
+DefaultRemoteTarget "fds.pbt";
